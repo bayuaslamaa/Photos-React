@@ -4,12 +4,11 @@ import {
   BrowserRouter as Router,
   Link,
   Switch,
-  Route,
-  NavLink
+  Route
 } from 'react-router-dom'
 import Photos from './containers/Photos'
 
-import { Nav, Navbar, Button } from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap'
 
 function App() {
   return (
@@ -18,10 +17,12 @@ function App() {
         <div>
           <Navbar bg="dark" variant="dark">
             <Navbar.Brand>MEPHOTOS</Navbar.Brand>
-            <Nav className="mr-auto">
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/photos">Photos</NavLink>
-            </Nav>
+            <Nav.Item className="mr-auto">
+              <Link className="nav-link" to="/">Home</Link>
+            </Nav.Item>
+            <Nav.Item className="mr-auto">
+              <Link className="nav-link" to="/photos">Photos</Link>
+            </Nav.Item>
           </Navbar>
           <Switch>
             <Route exact path="/">

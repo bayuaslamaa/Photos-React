@@ -12,9 +12,8 @@ export default function Photos() {
     }, [dispatch])
     return (
         <Container>
-            {JSON.stringify(photos)}
             {
-                photos.map(photo => (<CardPhoto key={photo.id} />))
+                photos.map(photo => (photo.id < 20) ? (<CardPhoto photo={photo} key={photo.id} />) : '')
             }
         </Container>
     )

@@ -7,13 +7,12 @@ export default function CardPhoto(props) {
     return (
         <Container>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={photo} />
+                <Card.Img variant="top" src={photo.thumbnailUrl} />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>No. {photo.id}</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                     </Card.Text>
+                        {photo.title}
+                    </Card.Text>
                 </Card.Body>
             </Card>
         </Container>
